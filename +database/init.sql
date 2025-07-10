@@ -1,6 +1,6 @@
 CREATE TABLE session (
                          id INTEGER PRIMARY KEY,
-                         startAt INTEGER NOT NULL,
+                         beginAt INTEGER NOT NULL,
                          finishAt INTEGER NOT NULL,
                          complexity INTEGER NOT NULL,
                          mistakes INTEGER NOT NULL

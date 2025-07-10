@@ -8,9 +8,10 @@ classdef Options
         fontSize double = 18
         fontWeight char = 'normal'
         fontAngle char = 'normal'
-        fontColor = [0.00,0.00,0.00]
-        backgroundFontColor = [1.00,1.00,1.00]
-        backgroundColor = [0.94,0.94,0.94]
+        fontColor (1, 3) double = [0.00,0.00,0.00]
+        backgroundFontColor (1, 3) double = [1.00,1.00,1.00]
+        backgroundColor (1, 3) double = [0.94,0.94,0.94]
+        tableRowStriping logical = false
     end
 
     methods

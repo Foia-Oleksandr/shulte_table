@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration file="C:\Users\Alex\OneDrive\Dokumente\MATLAB\shulte_table_ui\shulte_table_ui.prj" location="C:\Users\Alex\OneDrive\Dokumente\MATLAB\shulte_table_ui" name="shulte_table_ui" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="3598988893" file="${PROJECT_ROOT}\shulte_table_ui.prj" location="${PROJECT_ROOT}" name="shulte_table_ui" preferred-package-location="${PROJECT_ROOT}\shulte_table_ui\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>shulte_table_ui</param.appname>
     <param.icon />
     <param.icons />
@@ -41,9 +41,7 @@
 	 
  Input Arguments 
 	 -?  print help on how to use the application 
-	 input arguments 
- Description 
- 	 This initial implementation enables rapid iteration and concept testing with minimal overhead, serving as a foundation for future development in a web-friendly framework such as JavaScript or JavaFX.</param.help.text>
+	 input arguments</param.help.text>
     <unset>
       <param.icon />
       <param.icons />
@@ -90,18 +88,22 @@
       <file>${PROJECT_ROOT}\+controller\ElapsedTimer.m</file>
       <file>${PROJECT_ROOT}\+controller\hex2rgb.m</file>
       <file>${PROJECT_ROOT}\+controller\toMinutesAndSecconds.m</file>
+      <file>${PROJECT_ROOT}\+database\fetchData.m</file>
+      <file>${PROJECT_ROOT}\+database\getSession.m</file>
+      <file>${PROJECT_ROOT}\+database\getSessionsInfo.m</file>
       <file>${PROJECT_ROOT}\+database\initDatabase.m</file>
       <file>${PROJECT_ROOT}\+database\storeSessionToDatabase.m</file>
       <file>${PROJECT_ROOT}\+model\Config.m</file>
       <file>${PROJECT_ROOT}\+model\Options.m</file>
       <file>${PROJECT_ROOT}\+model\Session.m</file>
+      <file>${PROJECT_ROOT}\+model\SessionInfo.m</file>
       <file>${PROJECT_ROOT}\+model\ShulteTable.m</file>
       <file>${PROJECT_ROOT}\+model\State.m</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="splash.png" optional="false">C:\Users\Alex\OneDrive\Dokumente\MATLAB\shulte_table_ui\shulte_table_ui\for_testing\splash.png</file>
-      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="shulte_table_ui.exe" optional="false">C:\Users\Alex\OneDrive\Dokumente\MATLAB\shulte_table_ui\shulte_table_ui\for_testing\shulte_table_ui.exe</file>
-      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="readme.txt" optional="true">C:\Users\Alex\OneDrive\Dokumente\MATLAB\shulte_table_ui\shulte_table_ui\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="splash.png" optional="false">${PROJECT_ROOT}\shulte_table_ui\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="shulte_table_ui.exe" optional="false">${PROJECT_ROOT}\shulte_table_ui\for_testing\shulte_table_ui.exe</file>
+      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="readme.txt" optional="true">${PROJECT_ROOT}\shulte_table_ui\for_testing\readme.txt</file>
     </build-deliverables>
     <workflow />
     <matlab>
