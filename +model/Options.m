@@ -2,6 +2,7 @@ classdef Options
     
     properties
         complexity uint32 {mustBeInteger, mustBePositive} = 3
+        zeroStartIndexing logical = false
         hexNumbers logical = false
         hexLettersUpperCase logical = false
         fontName char = 'Calibri'
