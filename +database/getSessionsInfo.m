@@ -3,7 +3,7 @@ if nargin == 0
     limit = 500;
 end
 
-lastSessionsQuery = "SELECT id, beginAt, finishAt, complexity, mistakes FROM session ORDER BY id DESC LIMIT %d;";
+lastSessionsQuery = "SELECT id, beginAt, finishAt, complexity FROM session ORDER BY id DESC LIMIT %d;";
 query = sprintf(lastSessionsQuery, limit);
 results = database.fetchData(query);
 
@@ -15,8 +15,7 @@ else
             results{k,'id'}, ...
             datetime(results{k, 'beginAt'}, 'ConvertFrom', 'posixtime'), ...
             datetime(results{k, 'finishAt'}, 'ConvertFrom', 'posixtime'), ...
-            results{k, 'complexity'}, ...
-            results{k, 'mistakes'});
+            results{k, 'complexity'});
     end
 end
 

@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="4068145613" file="${PROJECT_ROOT}\shulte_table_ui.prj" location="${PROJECT_ROOT}" name="shulte_table_ui" preferred-package-location="${PROJECT_ROOT}\shulte_table_ui\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="1997023069" file="${PROJECT_ROOT}\shulte_table_ui.prj" location="${PROJECT_ROOT}" name="shulte_table_ui" preferred-package-location="${PROJECT_ROOT}\shulte_table_ui\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>shulte_table_ui</param.appname>
     <param.icon>${PROJECT_ROOT}\shulte_table_ui_resources\icon.ico</param.icon>
     <param.icons>
@@ -91,16 +91,21 @@
       <file>${PROJECT_ROOT}\+controller\hex2rgb.m</file>
       <file>${PROJECT_ROOT}\+controller\toMinutesAndSecconds.m</file>
       <file>${PROJECT_ROOT}\+database\fetchData.m</file>
+      <file>${PROJECT_ROOT}\+database\getLastCompletionTime.m</file>
       <file>${PROJECT_ROOT}\+database\getSession.m</file>
       <file>${PROJECT_ROOT}\+database\getSessionsInfo.m</file>
       <file>${PROJECT_ROOT}\+database\initDatabase.m</file>
       <file>${PROJECT_ROOT}\+database\storeSessionToDatabase.m</file>
+      <file>${PROJECT_ROOT}\+model\CompletionTime.m</file>
       <file>${PROJECT_ROOT}\+model\Config.m</file>
       <file>${PROJECT_ROOT}\+model\Options.m</file>
       <file>${PROJECT_ROOT}\+model\Session.m</file>
       <file>${PROJECT_ROOT}\+model\SessionInfo.m</file>
       <file>${PROJECT_ROOT}\+model\ShulteTable.m</file>
       <file>${PROJECT_ROOT}\+model\State.m</file>
+      <file>${PROJECT_ROOT}\+model\TargetInfoData.m</file>
+      <file>${PROJECT_ROOT}\+model\TaskDuration.m</file>
+      <file>${PROJECT_ROOT}\+model\toMinutesAndSeconds.m</file>
     </fileset.depfun>
     <build-deliverables>
       <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="splash.png" optional="false">${PROJECT_ROOT}\shulte_table_ui\for_testing\splash.png</file>
