@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="1997023069" file="${PROJECT_ROOT}\shulte_table_ui.prj" location="${PROJECT_ROOT}" name="shulte_table_ui" preferred-package-location="${PROJECT_ROOT}\shulte_table_ui\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="802746971" file="C${PROJECT_ROOT}\shulte_table_ui.prj" location="C${PROJECT_ROOT}" name="shulte_table_ui" preferred-package-location="C${PROJECT_ROOT}\shulte_table_ui\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>shulte_table_ui</param.appname>
     <param.icon>${PROJECT_ROOT}\shulte_table_ui_resources\icon.ico</param.icon>
     <param.icons>
@@ -101,6 +101,7 @@
       <file>${PROJECT_ROOT}\+model\Options.m</file>
       <file>${PROJECT_ROOT}\+model\Session.m</file>
       <file>${PROJECT_ROOT}\+model\SessionInfo.m</file>
+      <file>${PROJECT_ROOT}\+model\SessionResult.m</file>
       <file>${PROJECT_ROOT}\+model\ShulteTable.m</file>
       <file>${PROJECT_ROOT}\+model\State.m</file>
       <file>${PROJECT_ROOT}\+model\TargetInfoData.m</file>
@@ -108,9 +109,9 @@
       <file>${PROJECT_ROOT}\+model\toMinutesAndSeconds.m</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="splash.png" optional="false">${PROJECT_ROOT}\shulte_table_ui\for_testing\splash.png</file>
-      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="shulte_table_ui.exe" optional="false">${PROJECT_ROOT}\shulte_table_ui\for_testing\shulte_table_ui.exe</file>
-      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="readme.txt" optional="true">${PROJECT_ROOT}\shulte_table_ui\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="splash.png" optional="false">C${PROJECT_ROOT}\shulte_table_ui\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="shulte_table_ui.exe" optional="false">C${PROJECT_ROOT}\shulte_table_ui\for_testing\shulte_table_ui.exe</file>
+      <file location="${PROJECT_ROOT}\shulte_table_ui\for_testing" name="readme.txt" optional="true">C${PROJECT_ROOT}\shulte_table_ui\for_testing\readme.txt</file>
     </build-deliverables>
     <workflow />
     <matlab>
