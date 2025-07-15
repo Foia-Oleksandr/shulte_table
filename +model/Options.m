@@ -2,9 +2,11 @@ classdef Options
     
     properties
         complexity uint32 {mustBeInteger, mustBePositive} = 3
+        shulteTableView model.ShulteTableView = model.ShulteTableView.NumericDecimal;
         zeroStartIndexing logical = false
+        reverseOrder logical = false
         hexNumbers logical = false
-        hexLettersUpperCase logical = false
+        lettersUpperCase logical = false
         fontName char = 'Calibri'
         fontSize double = 18
         fontWeight char = 'normal'
