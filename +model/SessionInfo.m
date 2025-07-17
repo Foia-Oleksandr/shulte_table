@@ -5,12 +5,15 @@ classdef SessionInfo
         beginAt (1,1) datetime
         finishAt (1,1) datetime
         size (1,:) char
+        orderProperties model.ShulteTableOrder
+        view (1,1) model.ShulteTableView
         minDuration (1,1) double
         maxDuration (1,1) double
     end
 
     methods
-        function this = SessionInfo(id, beginAt, finishAt, size, minDuration, maxDuration)
+        function this = SessionInfo(id, beginAt, finishAt, size, ...
+                orderProperties, view, minDuration, maxDuration)
             if nargin == 0
                 return
             end
@@ -18,6 +21,8 @@ classdef SessionInfo
             this.beginAt = beginAt;
             this.finishAt = finishAt;
             this.size = size;
+            this.orderProperties = sort(orderProperties);
+            this.view = view;
             this.minDuration = minDuration;
             this.maxDuration = maxDuration;
         end

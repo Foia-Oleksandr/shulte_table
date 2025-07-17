@@ -58,16 +58,13 @@ classdef ShulteTable < handle
         end
 
         function data = getData(this)
-            switch(this.viewProperty)
-                case model.ShulteTableView.Alphabet
-                    data = this.getAlphabetData();
-                case model.ShulteTableView.NumericDecimal
-                    data = this.getDecimalData();
-                case model.ShulteTableView.NumericHexedimal
-                    data = this.getHexData();
-            end
+            data = this.numbersToData(this.numbers);
         end
 
+        function [from, to] = getFromToTuple(this)
+            values = this.numbersToData([0, this.size^2 - 1]);
+            [from, to] = values{:};
+        end
 
         function isExpecedCell = isExpecedCell(this, selection)
             actual = this.numbers(selection{:});
@@ -108,7 +105,18 @@ classdef ShulteTable < handle
 
     methods (Access = private)
 
-        function data = getDecimalData(this)
+        function data = numbersToData(this, numbers)
+            switch(this.viewProperty)
+                case model.ShulteTableView.Alphabet
+                    data = this.getAlphabetData(numbers);
+                case model.ShulteTableView.NumericDecimal
+                    data = this.getDecimalData(numbers);
+                case model.ShulteTableView.NumericHexedimal
+                    data = this.getHexData(numbers);
+            end
+        end
+
+        function data = getDecimalData(this, numbers)
             if any(this.orderProperties == model.ShulteTableOrder.NumericStartZero)
                 shift = 0;
             else
@@ -125,26 +133,26 @@ classdef ShulteTable < handle
             if any(this.orderProperties == model.ShulteTableOrder.ReverseOrder)
                 data = arrayfun(@(x) ...
                     sprintf(decimalTemplate, repmat(char(0160), 1, 2), maxNumber - x), ...
-                    this.numbers, 'UniformOutput', false);
+                    numbers, 'UniformOutput', false);
             else
                 data = arrayfun(@(x) ...
                     sprintf(decimalTemplate, repmat(char(0160), 1, 2), x + shift), ...
-                    this.numbers, 'UniformOutput', false);
+                    numbers, 'UniformOutput', false);
             end
         end
 
-        function data = getAlphabetData(this)
+        function data = getAlphabetData(this, numbers)
             maxNumber = this.size ^ 2 - 1;
             symbolsLength = this.digitsForBase(maxNumber, numel(this.alphabet));
 
             if any(this.orderProperties == model.ShulteTableOrder.ReverseOrder)
                 data = arrayfun(@(x) ...
                     this.numberToAlphabet(maxNumber - x, symbolsLength), ...
-                    this.numbers, 'UniformOutput', false);
+                    numbers, 'UniformOutput', false);
             else
                 data = arrayfun(@(x) ...
                     this.numberToAlphabet(x, symbolsLength), ...
-                    this.numbers, 'UniformOutput', false);
+                    numbers, 'UniformOutput', false);
             end
         end
 
@@ -172,7 +180,7 @@ classdef ShulteTable < handle
             end
         end
 
-        function data = getHexData(this)
+        function data = getHexData(this, numbers)
             if any(this.orderProperties == model.ShulteTableOrder.NumericStartZero)
                 shift = 0;
             else
@@ -193,11 +201,11 @@ classdef ShulteTable < handle
             if any(this.orderProperties == model.ShulteTableOrder.ReverseOrder)
                 data = arrayfun(@(x) ...
                     sprintf(hexTemplate, repmat(char(0160), 1, 2), maxNumber - x), ...
-                    this.numbers, 'UniformOutput', false);
+                    numbers, 'UniformOutput', false);
             else
                 data = arrayfun(@(x) ...
                     sprintf(hexTemplate, repmat(char(0160), 1, 2), x + shift), ...
-                    this.numbers, 'UniformOutput', false);
+                    numbers, 'UniformOutput', false);
             end
         end
 

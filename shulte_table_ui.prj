@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="4081253183" file="${PROJECT_ROOT}\shulte_table_ui.prj" location="${PROJECT_ROOT}" name="shulte_table_ui" preferred-package-location="${PROJECT_ROOT}\shulte_table_ui\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="1748573237" file="\shulte_table_ui.prj" location="${PROJECT_ROOT}" name="shulte_table_ui" preferred-package-location="${PROJECT_ROOT}\shulte_table_ui\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>shulte_table_ui</param.appname>
     <param.icon>${PROJECT_ROOT}\shulte_table_ui_resources\icon.ico</param.icon>
     <param.icons>
@@ -14,7 +14,7 @@
     <param.company />
     <param.summary>Shulte Table exercise application designed in MATLAB</param.summary>
     <param.description>This initial implementation enables rapid iteration and concept testing with minimal overhead, serving as a foundation for future development in a web-friendly framework such as JavaScript or JavaFX.</param.description>
-    <param.screenshot>C:\Users\Alex\pp\matlab\Shulte_Table_ChatGPT Image Jul 10, 2025, 10_03_17 PM.png</param.screenshot>
+    <param.screenshot>C:\Users\Alex\pp\matlab\Shulte_Talbe_Rasputin_Transparent_ChatGPT Image Jul 17, 2025, 09_40_31 AM.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\shulte_table_ui\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>

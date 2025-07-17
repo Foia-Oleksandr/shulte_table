@@ -5,8 +5,9 @@ classdef SessionResult < model.Session
     end
     
     methods
-        function this = SessionResult(id, beginAt, finishAt, complexity, taskDurations)
-            this@model.Session(id, beginAt, finishAt, complexity);
+        function this = SessionResult(id, beginAt, finishAt, complexity, ...
+                orderProperties, view, taskDurations)
+            this@model.Session(id, beginAt, finishAt, complexity, orderProperties, view);
             this.taskDurations = taskDurations;
         end
         
