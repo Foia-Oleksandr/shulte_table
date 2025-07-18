@@ -173,8 +173,9 @@ classdef ShulteTable < handle
 
             if contains(letters, 'M', 'IgnoreCase',true) ...
                     || contains(letters, 'W', 'IgnoreCase',true) ...
-                    || contains(letters, 'B', 'IgnoreCase',true)
-                symbols = sprintf('%s%s%s', repmat(char(0160), 1, 1), letters, repmat(char(0160), 1, 0));
+                    || contains(letters, 'B', 'IgnoreCase',true) ...
+                    || contains(letters, 'N', 'IgnoreCase',true)
+                symbols = sprintf('%s%s%s', repmat(char(0160), 1, 2), letters, repmat(char(32), 1, 1));
             else
                 symbols = sprintf('%s%s%s', repmat(char(0160), 1, 2), letters, repmat(char(0160), 1, 1));
             end
@@ -213,6 +214,10 @@ classdef ShulteTable < handle
 
     methods (Static, Access = private)
         function out = intToBase(number, base)
+            arguments
+                number (1, 1) double
+                base (1,1) double
+            end
             if number == 0
                 out = 0;
                 return
