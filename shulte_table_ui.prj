@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="1772451717" file="${PROJECT_ROOT}\shulte_table_ui.prj" location="${PROJECT_ROOT}" name="shulte_table_ui" preferred-package-location="${PROJECT_ROOT}\shulte_table_ui\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="1772451717" file="${PROJECT_ROOT}\shulte_table_ui.prj" location="${PROJECT_ROOT}" name="shulte_table_ui" preferred-package-location="C:\Users\Alex\OneDrive\Dokumente\MATLAB\${PROJECT_ROOT}\shulte_table_ui\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>shulte_table_ui</param.appname>
     <param.icon>${PROJECT_ROOT}\shulte_table_ui_resources\icon.ico</param.icon>
     <param.icons>
@@ -83,6 +83,7 @@
     </fileset.main>
     <fileset.resources>
       <file>${PROJECT_ROOT}\+database\init.sql</file>
+      <file>${PROJECT_ROOT}\+doc\training_plan.html</file>
       <file>${PROJECT_ROOT}\+model\typo_buzz.mp3</file>
     </fileset.resources>
     <fileset.package />
