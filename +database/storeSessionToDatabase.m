@@ -8,8 +8,14 @@ storeSessionInfo(conn, session.beginAt, session.finishAt, session.complexity, se
 
 sessionId = getSessionId(conn);
 
-for k = 1 : numel(session.orderProperties)
-    storeOrderProperties(conn, sessionId, session.orderProperties(k));
+orderProperties = session.orderProperties;
+
+if session.view == model.ShulteTableView.Alphabet
+    orderProperties = orderProperties(orderProperties ~= model.ShulteTableOrder.NumericStartZero);
+end
+
+for k = 1 : numel(orderProperties)
+    storeOrderProperty(conn, sessionId, orderProperties(k));
 end
 
 for k = 1 : length(session.taskDurations(1, :))
@@ -37,7 +43,7 @@ function sessionId = getSessionId(conn)
 sessionId = fetch(conn, 'SELECT last_insert_rowid() as ID;').("ID");
 end
 
-function storeOrderProperties(conn, sessionId, orderProperty)
+function storeOrderProperty(conn, sessionId, orderProperty)
 arguments
     conn 
     sessionId
